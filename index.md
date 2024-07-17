@@ -1,4 +1,3 @@
-# design-patterns
 ## [Creational Patterns](/creational_patterns):
 ### Purpose
 These patterns provide mechanisms to create objects in a flexible and reusable way, abstracting the instantiation process. They promote loose coupling between the client code and the objects being created, making the system more adaptable to changes.
