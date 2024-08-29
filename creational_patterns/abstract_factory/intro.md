@@ -88,3 +88,7 @@ modern_sofa = modern_factory.create_sofa
 victorian_chair = victorian_factory.create_chair
 victorian_sofa = victorian_factory.create_sofa
 ```
+
+## To do:
+- Add leg_count to one of the table factories and add a way to handle the cases for when a class doesnt have leg_count.
+- Create a new product, called `Bench`.
