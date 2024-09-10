@@ -1,8 +1,7 @@
 module Furniture
   module Products
-    class Table
+    class Bench
       def material = raise('not implemented')
-      def leg_count = raise('not implemented')
     end
   end
 end
