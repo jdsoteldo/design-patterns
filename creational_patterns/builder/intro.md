@@ -20,7 +20,7 @@ Instead of having a complex constructor with many parameters, you use the Builde
 
 - Builder Interface: Define an interface (or abstract class) with methods for setting each option (e.g., set_vehicle_type, set_delivery_speed, add_additional_service).
 - Concrete Builders: Create separate builders for different types of deliveries (e.g., TruckDeliveryBuilder, ExpressDeliveryBuilder). Each builder implements the interface and provides specific implementations for setting the options.
-- Director: A director class orchestrates the building process. It uses a builder object to construct the final delivery object step by step.
+- Director: A director class orchestrates the building process. It uses a builder object to construct the final delivery object step by step. (optional)
 - Product: This is the final custom delivery object, which is created by the director using the builder.
 
 ### Benefits

@@ -2,10 +2,11 @@
 class DeliveryBuilder
   attr_accessor :vehicle_type, :delivery_speed, :additional_services, :signature_required
 
-  def initialize(vehicle_type = "Truck", delivery_speed = "Standard")
+  def initialize(vehicle_type = "Truck", delivery_speed = "Standard", signature_required = false)
     @vehicle_type = vehicle_type
     @delivery_speed = delivery_speed
     @additional_services = ["Base insurance"]
+    @signature_required = signature_required
   end
 
   def add_additional_service(service)
@@ -23,11 +24,8 @@ end
 
 
 class ExpressDeliveryBuilder < DeliveryBuilder
-  def initialize(vehicle_type = "Airplane", delivery_speed = "Express")
+  def initialize(vehicle_type = "Airplane", delivery_speed = "Express", signature_required = true)
     super
-    @vehicle_type = vehicle_type 
-    @delivery_speed = delivery_speed 
-    @signature_required = false
   end
 
   def set_vehicle_type(type)
