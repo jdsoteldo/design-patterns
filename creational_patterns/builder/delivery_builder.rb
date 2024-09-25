@@ -23,8 +23,6 @@ end
 
 
 class ExpressDeliveryBuilder < DeliveryBuilder
-  attr_accessor :signature_required
-
   def initialize(vehicle_type = "Airplane", delivery_speed = "Express")
     super
     @vehicle_type = vehicle_type 
