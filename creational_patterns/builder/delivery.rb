@@ -1,6 +1,4 @@
 class Delivery
-  attr_accessor :vehicle_type, :delivery_speed, :additional_services, :signature_required
-
   def initialize(builder)
     @vehicle_type = builder.vehicle_type
     @delivery_speed = builder.delivery_speed
