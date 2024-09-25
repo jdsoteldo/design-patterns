@@ -7,7 +7,9 @@ class ReportGenerator
 end
 
 report_data = { foo_key: "foo", bar_key: "bar", baz_key: "baz" }
-json_data = ReportGenerator.generate("report_data", 'json') 
+json_data = ReportGenerator.generate("report_data", 'json')
+json_data = ReportGenerator.generate("report_data", Array)
+
 
 p json_data
 
