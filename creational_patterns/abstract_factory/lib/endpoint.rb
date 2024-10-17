@@ -8,10 +8,11 @@ class Endpoint
     factory = Furniture::Factory.for(category)
     chair = factory.create_chair
     table = factory.create_table
+    bench = factory.create_bench
 
     puts <<~TEXT
     Chair has #{chair.leg_count} legs and #{chair.cushion? ? '' : 'no'} cushion.
-    Table is made of #{table.material}.
+    Table is made of #{table.material}. Bench is made out of #{bench.material}.
     TEXT
   end
 end
