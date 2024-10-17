@@ -1,12 +1,13 @@
 # Builder Interface
 class DeliveryBuilder
-  attr_accessor :vehicle_type, :delivery_speed, :additional_services, :signature_required
+  attr_accessor :vehicle_type, :delivery_speed, :additional_services, :signature_required, :photo_proof_needed
 
-  def initialize(vehicle_type = "Truck", delivery_speed = "Standard", signature_required = false)
+  def initialize(vehicle_type = "Truck", delivery_speed = "Standard", signature_required = false, photo_proof_needed = false)
     @vehicle_type = vehicle_type
     @delivery_speed = delivery_speed
     @additional_services = ["Base insurance"]
     @signature_required = signature_required
+    @photo_proof_needed = photo_proof_needed
   end
 
   def add_additional_service(service)
@@ -34,6 +35,10 @@ class ExpressDeliveryBuilder < DeliveryBuilder
 
   def set_delivery_speed(speed)
     @delivery_speed = speed
+  end
+
+  def photo_proof_needed(required)
+    @photo_proof_needed = required
   end
 
   def require_signature(required)

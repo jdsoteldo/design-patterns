@@ -10,6 +10,7 @@ standard_delivery.summary
 express_builder = ExpressDeliveryBuilder.new
 express_builder.add_additional_service("Extra insurance")
 express_builder.set_vehicle_type("very fast airplane")
+express_builder.photo_proof_needed(true)
 express_delivery = express_builder.get_delivery
 express_delivery.summary
 
