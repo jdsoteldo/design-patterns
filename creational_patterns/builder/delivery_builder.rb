@@ -25,7 +25,7 @@ end
 
 
 class ExpressDeliveryBuilder < DeliveryBuilder
-  def initialize(vehicle_type = "Airplane", delivery_speed = "Express", signature_required = true)
+  def initialize(vehicle_type = "Airplane", delivery_speed = "Express", signature_required = true, photo_proof_needed = false)
     super
   end
 
@@ -37,7 +37,7 @@ class ExpressDeliveryBuilder < DeliveryBuilder
     @delivery_speed = speed
   end
 
-  def photo_proof_needed(required)
+  def set_photo_proof_needed(required)
     @photo_proof_needed = required
   end
 
@@ -45,3 +45,26 @@ class ExpressDeliveryBuilder < DeliveryBuilder
     @signature_required = required
   end
 end
+
+class DroneDeliveryBuilder < DeliveryBuilder
+  def initialize(vehicle_type = "Drone", delivery_speed = "Fast", signature_required = false, photo_proof_needed = false)
+    super
+  end
+
+  def set_vehicle_type(type)
+    @vehicle_type = type
+  end
+
+  def set_delivery_speed(speed)
+    @delivery_speed = speed
+  end
+
+  def set_photo_proof_needed(required)
+    @photo_proof_needed = required
+  end
+
+  def require_signature(required)
+    @signature_required = required
+  end
+end
+
